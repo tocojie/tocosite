@@ -1,48 +1,72 @@
 <!DOCTYPE html>
+
 <html>
 
   <head>
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>tocoland</title>
-
+    <meta name="viewport" content="width=1200">
+    <title>home</title>
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
-
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   </head>
 
   <body>
+    <div id="container">
 
-    <div class="container">
-      <div class="leftPage">
-        
-        <!--nav bar-->
-        <div id="nav-placeholder"></div>
-        <script>
-          $(function(){
-            $("#nav-placeholder").load("nav.html");
-          });
+      <div id="header">
+        <script> 
+        $(function(){
+          $("#header").load("header.html"); 
+        });
         </script>
-        <!--nav bar end-->
+      </div>
+
+      <div id="menu">
+        <script> 
+        $(function(){
+          $("#menu").load("nav.html"); 
+        });
+        </script> 
+      </div>
+
+      <div id="content">
+
+        <div class="textBlock">
+          <a><img src="assets/images/papurrr.png" style="width:300px;display:block;margin:auto;padding: 0px 10px 10px 0px;margin:10px;" align=left></a><span>two doodles of the webmaster's fursona on (fake) pieces of paper</span>
+          <h2>intro</h2>
+          <p>Welcome to tocoland!!! this is a personal website, archiving my art, where to contact me, and other things that i have interests in. this site was started on 2025/10/24 with six previous failed attempts spanning multiple years. Hope you enjoy your stay!</p>
+          <p>This site was intended for computers. the webmaster uses a <a style="background-color:#0e3e05;color:white;">|3440x1440|</a><span>thats an ultrawide!! 21:9 aspect ratio</span> display, but widescreen resolutions should work fine. I doubt i'll ever do mobile support!</p>
+          <p>To the huuumans reading this (you too. cool robots. the cool kind) feel free to sign my guestbook if you like what you're seeing! however, if you've spotted something broken...let me know n' contact me! Or just use the guestbook lawl</p>
+        </div>
+
+
+        <div class="textBlock">
+          <table>
+            <tr>
+              <td style="vertical-align:top;">
+                <h2 style="margin-top:110px;">send me your drawings!</h2>
+                <p style="margin-top:20px;">..You people like sending stuff right ? welll.... look what i have here!!! It's a placey drawey thing... Send me something fun!</p>
+                <p>..Don't mind the strawpage branding. i can't really remove it without violating <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing" target="_blank">CORS</a><span><b class="highlight">[Opens in a new tab]</b> Cross-origin resource sharing, Wikipedia</span></p>
+              </td>
+              <td>
+                <div id="drawbook-box">
+                  <iframe id="drawbook-frame" src="https://tocoland.straw.page/" frameborder="no" scrolling="no"></iframe>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
 
       </div>
 
-
-      <div class="rightPage">
-
-        <h1><a href="." id="title"><img src="assets/images/home.gif"> tocoland</a></h1>
-        <h3 id="splash">May contain traces of citrus!</h3>
-        <hr>
-        <p>textextetext</p>
-
+      <div id="footer">
+        <p>Hrm?footer</p>
       </div>
-
-
+                
+            
     </div>
 
-
   </body>
+
+
 </html>
