@@ -1,9 +1,8 @@
 body {
 	font-family: 'MS UI Gothic';
 	color: #112915;
-	background: #a0b85d;
-    max-width: 1000px;
-    min-width: 700px;
+	background:     #e0e5bc;
+    width: 1000px;
     display: block;
     margin: auto;
 }
@@ -55,14 +54,25 @@ body {
     font-size: 14px;
     color: #ffffff;
     font-weight: bold;
+    z-index: 1;
+}
+
+.navButton:hover {
+    background-color: #74a031;
+    border: 3px outset #6caa36;
+    margin: -6px -2px 0px -2px;
+    z-index: 20;
 }
 
 #content {
     background-color: #ffffe3;
-    border: 1px solid #000000;
-    margin-top: -1px;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    margin-top: 20px;
     font-weight: bold;
     padding: 20px;
+    width: 1200px;
+    transform: translate(-130px, 0%);
 }
 
 h2 {
@@ -91,6 +101,16 @@ h2 {
     width: 660px;
 }
 
+#footer {
+    height: 16px;
+    background-color: #49640c;
+    color: #ffffe3;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
 
 a:hover+span {
     bottom: 0;
