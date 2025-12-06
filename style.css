@@ -1,7 +1,8 @@
 body {
 	font-family: 'MS UI Gothic';
 	color: #112915;
-	background:     #e0e5bc;
+	background: #e0e5bc;
+    background-image: url(assets/images/bleblebleble.png);
     width: 1000px;
     display: block;
     margin: auto;
@@ -10,13 +11,13 @@ body {
 #container {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
 
 #header {
     height: 50px;
     padding: 20px 0px 20px 0px;
-    border: 10px outset #80a939;
-    background-color: #567521;
+    background-color: #D86C75;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -33,51 +34,48 @@ body {
     flex-direction: row;
     justify-content: center;
     flex: 1 1 auto;
-    background-color: #2b480f;
-    border: 5px inset #5e962c;
-    margin-left: 4px;
-    margin-right: 4px;
+    background-color: #447C6D;
+    margin-bottom: 20px;
 }
 
 
 .navButton {
-    background-color: #2b480f;
+    background-color: #447C6D;
     border: 0px;
     padding: 10px;
-    border-left: 1px solid #5e962c;
-    border-right: 1px solid #5e962c;
+    border-left: 1px solid #D86C75;
+    border-right: 1px solid #D86C75;
     margin-left: -1px;
     max-width: 150px;
     padding-left: 20px;
     padding-right: 20px;
     font-family: 'Arial';
     font-size: 14px;
-    color: #ffffff;
+    color: #EFFF74;
     font-weight: bold;
     z-index: 1;
 }
 
 .navButton:hover {
-    background-color: #74a031;
-    border: 3px outset #6caa36;
-    margin: -6px -2px 0px -2px;
+    background-color: #EFFF74;
+    color: #447C6D;
+    border-top: 3px solid #EFFF74;
+    border-bottom: 3px solid #EFFF74;
+    margin: -6px 0px 0px 0px;
     z-index: 20;
 }
 
 #content {
-    background-color: #ffffe3;
-    border-left: 1px solid #000000;
-    border-right: 1px solid #000000;
-    margin-top: 20px;
+    background-color: #447C6D;
+    color: #18401f;
+    margin-top: -1px;
     font-weight: bold;
     padding: 20px;
-    width: 1200px;
-    transform: translate(-130px, 0%);
 }
 
 h2 {
     background-color: #efff74;
-    border-left: 3px solid #24842a;
+    color: #447C6D;
     padding: 10px 12px 10px 10px;
     margin-bottom: 0;
     display: inline-block;
@@ -86,6 +84,7 @@ h2 {
 
 #content > .textBlock {
     display: inline-block;
+    color: #ffffe3;
     width: 100%;
 }
 
@@ -98,18 +97,28 @@ h2 {
 
 #drawbook-frame {
     height: 660px;
-    width: 660px;
+    width: 620px;
 }
 
 #footer {
     height: 16px;
-    background-color: #49640c;
+    background-color: #447C6D;
     color: #ffffe3;
     font-weight: bold;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
+}
+
+a {
+    color: #EFFF74;
+}
+
+.outlink::after {
+    padding-left: 3px;
+    image-rendering: pixelated;
+    content: url(assets/images/outlink.png);
 }
 
 a:hover+span {
@@ -120,18 +129,11 @@ a:hover+span {
     right: 0;
     z-index: 1;
     font-size: 20px;
-    padding: 20px;
-    border: 5px double white;
-}
-
-span > .highlight {
-    background-color: white;
-    color: #9a1919;
-    padding: 3px;
+    padding-bottom: 8px;
 }
 
 a+span {
-    background: #9a1919;
+    background: #D86C75;
     color: white;
     text-align: center;
     padding: 0.25em;
