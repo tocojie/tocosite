@@ -4,10 +4,30 @@
 
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>home</title>
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+    <script>
+    $( function() {
+      $( document ).tooltip({
+        track: true,
+        position: {
+        my: "left+10 center+15"
+        },
+        show: {
+          duration: 0
+        },
+        hide: {
+          duration: 0
+        }
+      })
+    } );
+    </script>
+
   </head>
 
   <body>
@@ -41,10 +61,10 @@
       <div id="content">
         
         <div class="textBlock">
-          <a><img src="assets/images/papurrr.png" style="width:300px;display:block;margin:auto;padding: 0px 10px 10px 0px;margin-right:20px;filter: drop-shadow(5px 5px #2B4F44);" align=left></a><span>two doodles of the webmaster's fursona on (fake) pieces of paper</span>
+          <a><img src="assets/images/papurrr.png" style="width:300px;display:block;margin:auto;padding: 0px 10px 10px 0px;margin-right:20px;filter: drop-shadow(5px 5px #2B4F44);" align=left title="two doodles of the webmaster's fursona on (fake) pieces of paper"></a>
           <h2>intro</h2>
           <p>Welcome to tocoland!!! Im toco, and this is my personal website, archiving my art, where to contact me, and other things that i have interests in. this site was started on 2025/10/24 with six previous failed attempts spanning multiple years. Hope you enjoy your stayyy</p>
-          <p>This site was intended for computers. the webmaster uses a <a style="background-color:#2B4F44;color:white;">|3440x1440|</a><span>thats an ultrawide!! 21:9 aspect ratio</span> display, but widescreen resolutions should work fine. I doubt i'll ever do mobile support!</p>
+          <p>This site was intended for computers. the webmaster uses a <a style="background-color:#2B4F44;color:white;" title="thats an ultrawide!! 21:9 aspect ratio">|3440x1440|</a> display, but widescreen resolutions should work fine. I doubt i'll ever do mobile support!</p>
           <p>To the huuumans reading this (you too. cool robots. the cool kind) feel free to sign my guestbook if you like what you're seeing!!!!!</p>
         </div>
 
@@ -55,7 +75,7 @@
               <td style="vertical-align:top;">
                 <h2 style="margin-top:110px;">send me your drawings!</h2>
                 <p style="margin-top:20px;">..You people like sending stuff right ? welll.... look what i have here!!! It's a placey drawey thing... Send me something fun!</p>
-                <p>..Don't mind the strawpage branding. i can't really remove it without violating <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing" target="_blank" class="outlink">CORS</a><span><b class="highlight">[Opens in a new tab]</b> Cross-origin resource sharing, Wikipedia</span></p>
+                <p>..Don't mind the strawpage branding. i can't really remove it without violating <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing" target="_blank" class="outlink" title="[Opens in a new tab] Cross-origin resource sharing, Wikipedia">CORS</a></p>
               </td>
               <td>
                 <div id="drawbook-box">
@@ -74,7 +94,7 @@
                 
             
     </div>
-
+    
   </body>
 
 

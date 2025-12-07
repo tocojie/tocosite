@@ -13,9 +13,11 @@ body {
 #container {
     display: flex;
     flex-direction: column;
+    justify-items: center;
     margin: auto;
     width: 1000px;
     margin-top: 20px;
+    filter: drop-shadow(3px 3px #223e36);
 }
 
 #header {
@@ -117,6 +119,7 @@ body {
     border-left: 6px double #2B4F44;
     border-right: 6px double #2B4F44;
     margin-top: -1px;
+    font-size: 16px;
     font-weight: bold;
     padding: 20px;
 }
@@ -188,44 +191,21 @@ a {
     padding-left: 3px;
     image-rendering: pixelated;
     content: url(assets/images/outlink.png);
+    filter: drop-shadow(1px 1px #223e36);
 }
 
 .outlink:hover {
     background-color: #efff74;
     color: #2B4F44;
     text-decoration: none;
+    text-shadow: 0 0;
     margin-bottom: 0;
     display: inline-block;
 }
 
 .outlink:hover::after {
     content: url(assets/images/outlink2.png);
-}
-
-
-a:hover+span {
-    bottom: 0;
-    display: block;
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    font-size: 20px;
-    font-weight: bold;
-    height: 20px;
-    padding-bottom: 8px;
     filter: drop-shadow(0 0);
-    text-shadow: 0 0;
-}
-
-a+span {
-    background: #EFFF74;
-    color: black;
-    font-family: "MS UI Gothic";
-    text-align: center;
-    padding: 0.25em;
-    position: absolute;
-    font-size: 0;
 }
 
 
@@ -233,6 +213,20 @@ a+span {
 .navigationIcon::before {
     padding-right: 3px;
     image-rendering: pixelated;
+}
+
+.ui-tooltip {
+    background-color: #EFFF74;
+    width: fit-content;
+    left: 50px;
+    font-family: 'MS UI Gothic';
+    text-align: left;
+    font-size: 14px;
+    color: #2B4F44;
+    font-weight: bold;
+    padding: 5px;
+    border-left: 3px double #2B4F44;
+    z-index: 1;
 }
 
 
