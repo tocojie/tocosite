@@ -1,55 +1,86 @@
 body {
 	font-family: 'MS UI Gothic';
 	color: #112915;
-	background: #e0e5bc;
+	background: #2B4F44;
     background-image: url(assets/images/bleblebleble.png);
-    width: 1000px;
-    display: block;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 1400px;
     margin: auto;
+    image-rendering: pixelated;
 }
 
 #container {
     display: flex;
     flex-direction: column;
+    margin: auto;
+    width: 1000px;
     margin-top: 20px;
 }
 
 #header {
     height: 50px;
     padding: 20px 0px 20px 0px;
-    background-color: #D86C75;
+    background-color: #839548;
+    border-left: 6px double #2B4F44;
+    border-right: 6px double #2B4F44;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex: 1 1 auto;
+}
+
+#title {
+    filter: drop-shadow(1px 1px #223e36);
 }
 
 #header > img {
     display: block;
     margin: auto;
+    filter: drop-shadow(1px 1px #223e36);
+}
+
+#splash {
+    background-color: #2B4F44;
+    margin-bottom: 40px;
+}
+
+#splashText {
+    font-style: italic;
+    color: #EFFF74;
+    text-shadow: 1px 1px #12211d;
+    text-align: center;
+    height: 5px;
+    line-height: 0;
+    transform: scaleX(2);
+    font-size: 14px;
 }
 
 .navigationBox {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    position: absolute;
+    margin-left: -170px;
+    width: 160px;
+    color: #EFFF74;
+    float: left;
     flex: 1 1 auto;
-    background-color: #447C6D;
-    margin-bottom: 20px;
 }
 
 
 .navButton {
-    background-color: #447C6D;
+    background-color: #2B4F44;
     border: 0px;
     padding: 10px;
-    border-left: 1px solid #D86C75;
-    border-right: 1px solid #D86C75;
-    margin-left: -1px;
-    max-width: 150px;
+    border-left: 1px solid #A55259;
+    border-right: 1px solid #A55259;
+    width: 160px;
     padding-left: 20px;
     padding-right: 20px;
-    font-family: 'Arial';
+    font-family: 'MS UI Gothic';
+    text-decoration: underline;
+    text-align: left;
     font-size: 14px;
     color: #EFFF74;
     font-weight: bold;
@@ -58,16 +89,33 @@ body {
 
 .navButton:hover {
     background-color: #EFFF74;
-    color: #447C6D;
-    border-top: 3px solid #EFFF74;
-    border-bottom: 3px solid #EFFF74;
-    margin: -6px 0px 0px 0px;
+    color: #2B4F44;
     z-index: 20;
 }
 
+.navHeader {
+    background-color: #2B4F44;
+    border: 0px;
+    line-height: 14px;
+    padding-bottom: 15px;
+    border-left: 1px solid #A55259;
+    border-right: 1px solid #A55259;
+    width: 160px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'MS UI Gothic';
+    text-align: left;
+    font-size: 14px;
+    color: #EFFF74;
+    font-weight: bold;
+    z-index: 1;
+}
+
 #content {
-    background-color: #447C6D;
+    background-color: #64765b;
     color: #18401f;
+    border-left: 6px double #2B4F44;
+    border-right: 6px double #2B4F44;
     margin-top: -1px;
     font-weight: bold;
     padding: 20px;
@@ -75,8 +123,20 @@ body {
 
 h2 {
     background-color: #efff74;
-    color: #447C6D;
+    color: #2B4F44;
+    text-shadow: 0 0;
+    filter: drop-shadow(1px 1px #223e36);
     padding: 10px 12px 10px 10px;
+    margin-bottom: 0;
+    display: inline-block;
+    text-decoration: underline;
+}
+
+h3 {
+    background-color: #efff74;
+    text-shadow: 0 0;
+    filter: drop-shadow(1px 1px #12211d);
+    color: #2B4F44;
     margin-bottom: 0;
     display: inline-block;
 }
@@ -86,6 +146,11 @@ h2 {
     display: inline-block;
     color: #ffffe3;
     width: 100%;
+}
+
+#content > .textBlock {
+    text-shadow: 1px 1px #223e36;
+
 }
 
 
@@ -98,17 +163,21 @@ h2 {
 #drawbook-frame {
     height: 660px;
     width: 620px;
+    border-left: 6px double #2B4F44;
+    border-right: 6px double #2B4F44;
 }
 
 #footer {
     height: 16px;
-    background-color: #447C6D;
-    color: #ffffe3;
-    font-weight: bold;
+    background-color: #2B4F44;
+    color: #EFFF74;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
+    transform: scaleX(1.5);
+    text-shadow: 0 0;
+    filter: drop-shadow(0 0);
 }
 
 a {
@@ -121,6 +190,19 @@ a {
     content: url(assets/images/outlink.png);
 }
 
+.outlink:hover {
+    background-color: #efff74;
+    color: #2B4F44;
+    text-decoration: none;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+.outlink:hover::after {
+    content: url(assets/images/outlink2.png);
+}
+
+
 a:hover+span {
     bottom: 0;
     display: block;
@@ -129,12 +211,17 @@ a:hover+span {
     right: 0;
     z-index: 1;
     font-size: 20px;
+    font-weight: bold;
+    height: 20px;
     padding-bottom: 8px;
+    filter: drop-shadow(0 0);
+    text-shadow: 0 0;
 }
 
 a+span {
-    background: #D86C75;
-    color: white;
+    background: #EFFF74;
+    color: black;
+    font-family: "MS UI Gothic";
     text-align: center;
     padding: 0.25em;
     position: absolute;
@@ -143,6 +230,63 @@ a+span {
 
 
 
+.navigationIcon::before {
+    padding-right: 3px;
+    image-rendering: pixelated;
+}
 
+
+.navigationHome::before {
+    content: url(assets/images/home.png);
+}
+
+.navButton:hover > .navigationHome::before {
+    content: url(assets/images/home2.png);
+}
+
+
+.navigationAbout::before {
+    content: url(assets/images/aboutme.png);
+}
+
+.navButton:hover > .navigationAbout::before {
+    content: url(assets/images/aboutme2.png);
+}
+
+
+.navigationArt:before {
+    content: url(assets/images/artgallery.png);
+}
+
+.navButton:hover > .navigationArt::before {
+    content: url(assets/images/artgallery2.png);
+}
+
+
+.navigationInterests:before {
+    content: url(assets/images/interests.png);
+}
+
+.navButton:hover > .navigationInterests::before {
+    content: url(assets/images/interests2.png);
+}
+
+
+.navigationLinks:before {
+    content: url(assets/images/links.png);
+}
+
+.navButton:hover > .navigationLinks::before {
+    content: url(assets/images/links2.png);
+}
+
+
+.navigationGuestbook:before {
+    content: url(assets/images/guestbook.png);
+}
+
+.navButton:hover > .navigationGuestbook::before {
+    content: url(assets/images/guestbook2.png);
+}
 
 
