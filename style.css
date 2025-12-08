@@ -1,3 +1,7 @@
+html {
+    cursor: url('assets/cursor/cursor_base.cur'), auto;
+}
+
 body {
 	font-family: 'MS UI Gothic';
 	color: #112915;
@@ -5,7 +9,8 @@ body {
     background-image: url(assets/images/bleblebleble.png);
     background-size: cover;
     background-attachment: fixed;
-    width: 1400px;
+    min-width: 1400px;
+    display: block;
     margin: auto;
     image-rendering: pixelated;
 }
@@ -13,8 +18,8 @@ body {
 #container {
     display: flex;
     flex-direction: column;
-    justify-items: center;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 1000px;
     margin-top: 20px;
     filter: drop-shadow(3px 3px #223e36);
@@ -45,13 +50,22 @@ body {
 #splash {
     background-color: #2B4F44;
     margin-bottom: 40px;
+    width: 100%;
+}
+
+/* hacky fix for the stupid tooltip */
+#splash > a {
+    display: block;
+    width: fit-content;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #splashText {
     font-style: italic;
     color: #EFFF74;
     text-shadow: 1px 1px #12211d;
-    text-align: center;
     height: 5px;
     line-height: 0;
     transform: scaleX(2);
@@ -89,11 +103,21 @@ body {
     z-index: 1;
 }
 
+@keyframes hoverBounce {
+  0% {transform: scaleY(1.5);}
+}
+
 .navButton:hover {
     background-color: #EFFF74;
     color: #2B4F44;
+    animation: hoverBounce 0.1s;
     z-index: 20;
 }
+
+@keyframes slightHoverBounce {
+  0% {transform: scaleY(1.02);}
+}
+
 
 .navHeader {
     background-color: #2B4F44;
@@ -113,6 +137,14 @@ body {
     z-index: 1;
 }
 
+@keyframes navHeaderHoverBounce {
+  0% {transform: scaleX(1.7) scaleY(0.9);}
+}
+
+.navHeader:hover > h3 {
+    animation: navHeaderHoverBounce 0.1s;
+}
+
 #content {
     background-color: #64765b;
     color: #18401f;
@@ -127,6 +159,7 @@ body {
 h2 {
     background-color: #efff74;
     color: #2B4F44;
+    font-size: 24px;
     text-shadow: 0 0;
     filter: drop-shadow(1px 1px #223e36);
     padding: 10px 12px 10px 10px;
@@ -216,8 +249,11 @@ a {
 }
 
 .ui-tooltip {
+    position: fixed;
+    margin-left: 20px;
     background-color: #EFFF74;
     width: fit-content;
+    max-width: 500px;
     left: 50px;
     font-family: 'MS UI Gothic';
     text-align: left;
@@ -225,11 +261,23 @@ a {
     color: #2B4F44;
     font-weight: bold;
     padding: 5px;
-    border-left: 3px double #2B4F44;
+    border: 1px solid #223e36;
+    filter: drop-shadow(3px 3px #223e36);
+    transform: scaleX(1.01);
+    transform: scaleY(1.01);
     z-index: 1;
+    animation: tooltipAppear 0.1s;
 }
 
+.hasTooltip:hover {
+    cursor: url('assets/cursor/cursor_tooltip.cur'), auto;
+}
 
+@keyframes tooltipAppear {
+    0% {transform: scaleY(0.1);}
+    20% {transform: scaleY(0.1);}
+    60% {transform: scaleY(1.3);}
+}
 
 
 
@@ -287,3 +335,6 @@ a {
 }
 
 
+.clickable:active {
+    animation: slightHoverBounce 0.1s;
+}
